@@ -8,7 +8,7 @@ class ModConfig
     public float TakeScreenshotKeyZoomLevel { get; set; }
     public string FolderDestinationForDailyScreenshots { get; set; }
     public string FolderDestinationForKeypressScreenshots { get; set; }
-    
+    public bool TakeScreenshotOnRainyWeatherDays { get; set; }
     public Dictionary<string, bool> HowOftenToTakeScreenshot { get; set; }
 
     public ModConfig()
@@ -18,7 +18,7 @@ class ModConfig
         TakeScreenshotKeyZoomLevel = 0.25f; // zoomed out to view entire map
         FolderDestinationForDailyScreenshots = "default";
         FolderDestinationForKeypressScreenshots = "default";
-
+        TakeScreenshotOnRainyWeatherDays = true;
         HowOftenToTakeScreenshot = new Dictionary<string, bool>
         {
             {"Daily", true},

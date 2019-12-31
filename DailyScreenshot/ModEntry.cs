@@ -122,6 +122,11 @@ namespace DailyScreenshot
         /// <summary>Takes a screenshot of the entire farm.</summary>
         private void ActuallyTakeScreenshot()
         {
+            if (Config.TakeScreenshotOnRainyWeatherDays == false && (Game1.isRaining == true || Game1.isLightning == true))
+            {
+                return;
+            }
+
             ConvertInGameDateToNumericFormat();
             string screenshotName = $"{stardewValleyYear}-{stardewValleySeason}-{stardewValleyDayOfMonth}";
 
