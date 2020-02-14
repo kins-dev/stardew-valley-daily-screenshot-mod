@@ -245,7 +245,7 @@ namespace DailyScreenshot
                              }
                          }));
                     // Show a list of rules and allow the user to enable/disable them here
-                    //oPage.options.Add(new OptionsElement("DailyScreenshot Mod Rules:"));
+                    oPage.options.Add(new OptionsElement("DailyScreenshot Mod Rules:"));
                 }
             }
         }
@@ -384,7 +384,6 @@ namespace DailyScreenshot
         /// <param name="e">The event data.</param>
         private void OnGameLaunched(object sender, GameLaunchedEventArgs e)
         {
-            // Move this to OnDayStart and only register what is needed
             Helper.Events.GameLoop.DayStarted += OnDayStarted;
             Helper.Events.GameLoop.ReturnedToTitle += OnReturnedToTitle;
         }
